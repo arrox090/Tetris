@@ -443,6 +443,7 @@ public class MenuFrame implements ActionListener {
             return;
         }
 
+        playerName.setText(name);
         players.get(playerPos).setName(name);
         player = players.get(playerPos);
         serialize(players);
