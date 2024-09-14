@@ -13,7 +13,7 @@ public class PlayerSettingsFrame extends JDialog {
         super(parentFrame, "Modifiers settings", true);
 
         setIconImage(GameFrame.LOGO.getImage());
-        setSize(500, 400);
+        setSize(500, 475);
         setLayout(null);
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -65,6 +65,12 @@ public class PlayerSettingsFrame extends JDialog {
         add(musicOnOff);
 
         musicVolume.setEnabled(musicOnOff.isSelected());
+
+        // Ok button
+        JButton ok = new JButton("Ok");
+        ok.addActionListener(e -> dispose());
+        ok.setBounds(50, 390, 400, 50);
+        add(ok);
 
         // sliding on/off
         // graphics

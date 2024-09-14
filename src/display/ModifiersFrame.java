@@ -14,7 +14,7 @@ public class ModifiersFrame extends JDialog {
         super(parentFrame, "Modifiers settings", true);
 
         setIconImage(GameFrame.LOGO.getImage());
-        setSize(500, 425);
+        setSize(500, 475);
         setLayout(null);
         setResizable(false);
 
@@ -78,6 +78,12 @@ public class ModifiersFrame extends JDialog {
         });
         reset.setBounds(150, 360, 200, 30);
         add(reset);
+
+        // Ok button
+        JButton ok = new JButton("Ok");
+        ok.addActionListener(e -> dispose());
+        ok.setBounds(50, 390, 400, 50);
+        add(ok);
 
         // Set position and make window visible
         setLocationRelativeTo(parentFrame);
